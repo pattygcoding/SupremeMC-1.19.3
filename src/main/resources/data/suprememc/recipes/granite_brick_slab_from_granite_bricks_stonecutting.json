@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "suprememc:granite_bricks"
+  },
+  "result": "suprememc:granite_brick_slab"
+}

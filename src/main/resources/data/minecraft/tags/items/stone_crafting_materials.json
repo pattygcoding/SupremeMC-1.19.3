@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values":
+  [
+  	"suprememc:cobbled_andesite",
+    "suprememc:cobbled_diorite",
+    "suprememc:cobbled_granite"
+  ]
+}

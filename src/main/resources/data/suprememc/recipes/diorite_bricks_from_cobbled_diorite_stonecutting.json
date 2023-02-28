@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "suprememc:cobbled_diorite"
+  },
+  "result": "suprememc:diorite_bricks"
+}
