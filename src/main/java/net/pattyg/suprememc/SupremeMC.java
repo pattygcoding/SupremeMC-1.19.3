@@ -7,6 +7,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -50,6 +51,7 @@ public class SupremeMC
     public static final DeferredRegister<WorldCarver<?>> CARVER_REGISTER = DeferredRegister.create(Registries.CARVER, MOD_ID);
     public static final DeferredRegister<ConfiguredWorldCarver<?>> CONFIGURED_CARVER_REGISTER = DeferredRegister.create(Registries.CONFIGURED_CARVER, MOD_ID);
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURE_REGISTER = DeferredRegister.create(Registries.CONFIGURED_FEATURE, MOD_ID);
+    public static final DeferredRegister<Level> DIMENSION_REGISTER = DeferredRegister.create(Registries.DIMENSION, MOD_ID);
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPE_REGISTER = DeferredRegister.create(Registries.ENTITY_TYPE, MOD_ID);
     public static final DeferredRegister<Feature<?>> FEATURE_REGISTER = DeferredRegister.create(Registries.FEATURE, MOD_ID);
     public static final DeferredRegister<Fluid> FLUID_REGISTER = DeferredRegister.create(Registries.FLUID, MOD_ID);
@@ -75,6 +77,7 @@ public class SupremeMC
         CARVER_REGISTER.register(modEventBus);
         CONFIGURED_CARVER_REGISTER.register(modEventBus);
         CONFIGURED_FEATURE_REGISTER.register(modEventBus);
+        DIMENSION_REGISTER.register(modEventBus);
         ENTITY_TYPE_REGISTER.register(modEventBus);
         FEATURE_REGISTER.register(modEventBus);
         FLUID_REGISTER.register(modEventBus);
@@ -106,6 +109,7 @@ public class SupremeMC
             event.accept(SMCBlocks.ANDESITE_BRICKS);
             event.accept(SMCBlocks.DIORITE_BRICKS);
             event.accept(SMCBlocks.GRANITE_BRICKS);
+            event.accept(SMCBlocks.GLOWING_OBSIDIAN);
             event.accept(SMCBlocks.AQUAMARINE_BLOCK);
             
             // Slime Blocks

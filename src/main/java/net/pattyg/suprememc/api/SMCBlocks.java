@@ -13,6 +13,7 @@ public class SMCBlocks
     public static RegistryObject<Block> ANDESITE_BRICKS;
     public static RegistryObject<Block> DIORITE_BRICKS;
     public static RegistryObject<Block> GRANITE_BRICKS;
+    public static RegistryObject<Block> GLOWING_OBSIDIAN;
 
     // Mineral Blocks
     public static RegistryObject<Block> AQUAMARINE_BLOCK;
@@ -58,5 +59,9 @@ public class SMCBlocks
     public static RegistryObject<Block> ANDESITE_BRICK_WALL;
     public static RegistryObject<Block> DIORITE_BRICK_WALL;
     public static RegistryObject<Block> GRANITE_BRICK_WALL;
+
+    // Utility
+    //public static RegistryObject<Block> ICETHER_PORTAL;
+
 
 }

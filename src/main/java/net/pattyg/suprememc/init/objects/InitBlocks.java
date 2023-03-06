@@ -32,6 +32,10 @@ public class InitBlocks
         DIORITE_BRICKS = registerBlock("diorite_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(1.5f, 6.0f).sound(SoundType.STONE)));
         GRANITE_BRICKS = registerBlock("granite_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DIRT).requiresCorrectToolForDrops().strength(1.5f, 6.0f).sound(SoundType.STONE)));
 
+        GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).requiresCorrectToolForDrops().strength(50.0F, 1200.0F).lightLevel((p_50755_) -> {
+            return 12;
+        })));
+
         // Mineral Blocks
         AQUAMARINE_BLOCK = registerBlock("aquamarine_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE).requiresCorrectToolForDrops().strength(5.0f, 6.0f).sound(SoundType.STONE)));
 
@@ -59,23 +63,27 @@ public class InitBlocks
         DIORITE_BRICK_WALL = registerBlock("diorite_brick_wall", () -> new WallBlock(Block.Properties.copy(DIORITE_BRICKS.get())));
         GRANITE_BRICK_WALL = registerBlock("granite_brick_wall", () -> new WallBlock(Block.Properties.copy(GRANITE_BRICKS.get())));
 
-        RED_SLIME_BLOCK= registerBlock("red_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_RED));
-        ORANGE_SLIME_BLOCK= registerBlock("orange_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_ORANGE));
-        YELLOW_SLIME_BLOCK= registerBlock("yellow_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_YELLOW));
-        LIME_SLIME_BLOCK= registerBlock("lime_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GREEN));
-        GREEN_SLIME_BLOCK= registerBlock("green_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GREEN));
-        LIGHT_BLUE_SLIME_BLOCK= registerBlock("light_blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_BLUE));
-        CYAN_SLIME_BLOCK= registerBlock("cyan_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_CYAN));
-        BLUE_SLIME_BLOCK= registerBlock("blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLUE));
-        PURPLE_SLIME_BLOCK= registerBlock("purple_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PURPLE));
-        MAGENTA_SLIME_BLOCK= registerBlock("magenta_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_MAGENTA));
-        PINK_SLIME_BLOCK= registerBlock("pink_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PINK));
-        WHITE_SLIME_BLOCK= registerBlock("white_slime_block", () -> new SlimeBlockSMC(MaterialColor.SNOW));
-        LIGHT_GRAY_SLIME_BLOCK= registerBlock("light_gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GRAY));
-        GRAY_SLIME_BLOCK= registerBlock("gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GRAY));
-        BLACK_SLIME_BLOCK= registerBlock("black_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLACK));
-        BROWN_SLIME_BLOCK= registerBlock("brown_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BROWN));
+        RED_SLIME_BLOCK = registerBlock("red_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_RED));
+        ORANGE_SLIME_BLOCK = registerBlock("orange_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_ORANGE));
+        YELLOW_SLIME_BLOCK = registerBlock("yellow_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_YELLOW));
+        LIME_SLIME_BLOCK = registerBlock("lime_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GREEN));
+        GREEN_SLIME_BLOCK = registerBlock("green_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GREEN));
+        LIGHT_BLUE_SLIME_BLOCK = registerBlock("light_blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_BLUE));
+        CYAN_SLIME_BLOCK = registerBlock("cyan_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_CYAN));
+        BLUE_SLIME_BLOCK = registerBlock("blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLUE));
+        PURPLE_SLIME_BLOCK = registerBlock("purple_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PURPLE));
+        MAGENTA_SLIME_BLOCK = registerBlock("magenta_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_MAGENTA));
+        PINK_SLIME_BLOCK = registerBlock("pink_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PINK));
+        WHITE_SLIME_BLOCK = registerBlock("white_slime_block", () -> new SlimeBlockSMC(MaterialColor.SNOW));
+        LIGHT_GRAY_SLIME_BLOCK = registerBlock("light_gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GRAY));
+        GRAY_SLIME_BLOCK = registerBlock("gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GRAY));
+        BLACK_SLIME_BLOCK = registerBlock("black_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLACK));
+        BROWN_SLIME_BLOCK = registerBlock("brown_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BROWN));
 
+        /*ICETHER_PORTAL = registerBlock("icether_portal", () -> new IcetherPortalBlockSMC(BlockBehaviour.Properties.of(Material.PORTAL).noCollission().randomTicks().strength(-1.0F).sound(SoundType.GLASS).lightLevel((p_50872_) -> {
+            return 11;
+        })));*/
+        //Blocks.NETHER_PORTAL
     }
 
     public static RegistryObject<Block> registerBlock(String name, Supplier<Block> blockSupplier)
