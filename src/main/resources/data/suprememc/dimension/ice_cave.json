@@ -1,13 +1,13 @@
 {
-  "type": "suprememc:the_cave",
+  "type": "suprememc:ice_cave",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "suprememc:the_cave",
+    "settings": "suprememc:ice_cave",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:nether_wastes",
+          "biome": "suprememc:packed_ice_caves",
           "parameters": {
             "temperature": 0,
             "humidity": 0,

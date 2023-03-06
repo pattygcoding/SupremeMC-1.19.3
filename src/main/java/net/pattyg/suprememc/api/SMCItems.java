@@ -7,4 +7,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class SMCItems
 {
     public static RegistryObject<Item> AQUAMARINE;
+
+    public static RegistryObject<Item> LIQUID_GAS_BUCKET;
 }

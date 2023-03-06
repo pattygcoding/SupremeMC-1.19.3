@@ -1,0 +1,7 @@
+{
+	"render_type": "minecraft:translucent",
+	"textures": 
+	{
+		"particle": "suprememc:block/liquid_gas_still"
+	}
+}

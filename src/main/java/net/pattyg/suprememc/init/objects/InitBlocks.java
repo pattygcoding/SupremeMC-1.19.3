@@ -1,5 +1,7 @@
 package net.pattyg.suprememc.init.objects;
 
+import com.google.common.base.Suppliers;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -8,7 +10,10 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.RegistryObject;
 import net.pattyg.suprememc.SupremeMC;
+import net.pattyg.suprememc.api.SMCFluids;
+import net.pattyg.suprememc.block.LiquidGasBlockSMC;
 import net.pattyg.suprememc.block.SlimeBlockSMC;
+import net.pattyg.suprememc.init.misc.InItMaterials;
 
 import static net.pattyg.suprememc.api.SMCBlocks.*;
 
@@ -23,6 +28,12 @@ public class InitBlocks
 
     public static void registerBlocks()
     {
+        // Liquids
+        Supplier<? extends FlowingFluid> LIQUID_GAS_SUPPLIER = Suppliers.memoize(() -> (FlowingFluid) SMCFluids.LIQUID_GAS.get());
+        LIQUID_GAS = registerBlock("liquid_gas", () -> new LiquidGasBlockSMC(LIQUID_GAS_SUPPLIER, BlockBehaviour.Properties.of(InItMaterials.LIQUID_GAS).noCollission().randomTicks().strength(100.0F).lightLevel((p_220867_) -> {
+            return 7;
+        }).noLootTable()));
+
         // Building Blocks
         COBBLED_ANDESITE = registerBlock("cobbled_andesite", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops().strength(2.0f, 6.0f).sound(SoundType.STONE)));
         COBBLED_DIORITE = registerBlock("cobbled_diorite", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(2.0f, 6.0f).sound(SoundType.STONE)));

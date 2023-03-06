@@ -32,6 +32,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.pattyg.suprememc.api.SMCBlocks;
 import net.pattyg.suprememc.api.SMCItems;
 import net.pattyg.suprememc.init.misc.InitTabs;
+import net.pattyg.suprememc.init.objects.InItFluids;
 import net.pattyg.suprememc.init.objects.InitBlocks;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.sounds.SoundEvent;
@@ -89,6 +90,7 @@ public class SupremeMC
 
         InitItems.setup();
         InitBlocks.setup();
+        InItFluids.setup();
 
         modEventBus.addListener(this::addCreative);
     }
@@ -157,6 +159,7 @@ public class SupremeMC
         if(event.getTab() == InitTabs.SUPREMEMC_ITEMS)
         {
             event.accept(SMCItems.AQUAMARINE);
+            event.accept(SMCItems.LIQUID_GAS_BUCKET);
         }
     }
 

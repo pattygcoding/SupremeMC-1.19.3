@@ -6,6 +6,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class SMCBlocks
 {
+    // Fluids
+    public static RegistryObject<Block> LIQUID_GAS;
+
     // Building Blocks
     public static RegistryObject<Block> COBBLED_ANDESITE;
     public static RegistryObject<Block> COBBLED_DIORITE;
