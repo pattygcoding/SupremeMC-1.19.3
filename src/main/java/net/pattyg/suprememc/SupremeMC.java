@@ -27,6 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import net.pattyg.suprememc.api.SMCBlocks;
 import net.pattyg.suprememc.api.SMCItems;
 import net.pattyg.suprememc.init.misc.InitTabs;
@@ -106,6 +107,24 @@ public class SupremeMC
             event.accept(SMCBlocks.DIORITE_BRICKS);
             event.accept(SMCBlocks.GRANITE_BRICKS);
             event.accept(SMCBlocks.AQUAMARINE_BLOCK);
+            
+            // Slime Blocks
+            event.accept(SMCBlocks.RED_SLIME_BLOCK);
+            event.accept(SMCBlocks.ORANGE_SLIME_BLOCK);
+            event.accept(SMCBlocks.YELLOW_SLIME_BLOCK);
+            event.accept(SMCBlocks.LIME_SLIME_BLOCK);
+            event.accept(SMCBlocks.GREEN_SLIME_BLOCK);
+            event.accept(SMCBlocks.LIGHT_BLUE_SLIME_BLOCK);
+            event.accept(SMCBlocks.CYAN_SLIME_BLOCK);
+            event.accept(SMCBlocks.BLUE_SLIME_BLOCK);
+            event.accept(SMCBlocks.PURPLE_SLIME_BLOCK);
+            event.accept(SMCBlocks.MAGENTA_SLIME_BLOCK);
+            event.accept(SMCBlocks.PINK_SLIME_BLOCK);
+            event.accept(SMCBlocks.WHITE_SLIME_BLOCK);
+            event.accept(SMCBlocks.LIGHT_GRAY_SLIME_BLOCK);
+            event.accept(SMCBlocks.GRAY_SLIME_BLOCK);
+            event.accept(SMCBlocks.BLACK_SLIME_BLOCK);
+            event.accept(SMCBlocks.BROWN_SLIME_BLOCK);
 
             // Stairs
             event.accept(SMCBlocks.COBBLED_ANDESITE_STAIRS);

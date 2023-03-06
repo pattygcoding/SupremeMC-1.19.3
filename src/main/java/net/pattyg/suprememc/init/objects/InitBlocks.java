@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.RegistryObject;
 import net.pattyg.suprememc.SupremeMC;
+import net.pattyg.suprememc.block.SlimeBlockSMC;
 
 import static net.pattyg.suprememc.api.SMCBlocks.*;
 
@@ -58,6 +59,22 @@ public class InitBlocks
         DIORITE_BRICK_WALL = registerBlock("diorite_brick_wall", () -> new WallBlock(Block.Properties.copy(DIORITE_BRICKS.get())));
         GRANITE_BRICK_WALL = registerBlock("granite_brick_wall", () -> new WallBlock(Block.Properties.copy(GRANITE_BRICKS.get())));
 
+        RED_SLIME_BLOCK= registerBlock("red_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_RED));
+        ORANGE_SLIME_BLOCK= registerBlock("orange_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_ORANGE));
+        YELLOW_SLIME_BLOCK= registerBlock("yellow_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_YELLOW));
+        LIME_SLIME_BLOCK= registerBlock("lime_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GREEN));
+        GREEN_SLIME_BLOCK= registerBlock("green_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GREEN));
+        LIGHT_BLUE_SLIME_BLOCK= registerBlock("light_blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_BLUE));
+        CYAN_SLIME_BLOCK= registerBlock("cyan_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_CYAN));
+        BLUE_SLIME_BLOCK= registerBlock("blue_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLUE));
+        PURPLE_SLIME_BLOCK= registerBlock("purple_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PURPLE));
+        MAGENTA_SLIME_BLOCK= registerBlock("magenta_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_MAGENTA));
+        PINK_SLIME_BLOCK= registerBlock("pink_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_PINK));
+        WHITE_SLIME_BLOCK= registerBlock("white_slime_block", () -> new SlimeBlockSMC(MaterialColor.SNOW));
+        LIGHT_GRAY_SLIME_BLOCK= registerBlock("light_gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_LIGHT_GRAY));
+        GRAY_SLIME_BLOCK= registerBlock("gray_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_GRAY));
+        BLACK_SLIME_BLOCK= registerBlock("black_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BLACK));
+        BROWN_SLIME_BLOCK= registerBlock("brown_slime_block", () -> new SlimeBlockSMC(MaterialColor.COLOR_BROWN));
 
     }
 
